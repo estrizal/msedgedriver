@@ -8,7 +8,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.txt"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = '0.0.1'
+VERSION = '0.0.3'
 DESCRIPTION = 'ms edge selenium driver downloader'
 LONG_DESCRIPTION = 'It automatically downloads ms edge selenium driver that is compatible with ms edge browser installed on your system. Just use install() command and it will download msedgedriver file in that directory'
 
