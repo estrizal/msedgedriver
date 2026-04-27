@@ -29,7 +29,7 @@ def install():
     def update_driver(MS):
         print("downloading the edgedriver for this version")
         import urllib.request
-        urllib.request.urlretrieve("https://msedgedriver.azureedge.net//"+str(MS)+"/edgedriver_win32.zip", "edgedriver_win32.zip")
+        urllib.request.urlretrieve("https://msedgedriver.microsoft.com/"+str(MS)+"/edgedriver_win64.zip", "edgedriver_win32.zip")
 
 
         with ZipFile('edgedriver_win32.zip','r') as zip:
