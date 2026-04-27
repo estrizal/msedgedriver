@@ -18,7 +18,7 @@ def install():
                 desc, i = None, 0
                 while not desc or desc[0] != name:
                     desc = winreg.EnumValue(handle, i)
-                    i += i
+                    i += 1
                 return desc[1]
 
 
