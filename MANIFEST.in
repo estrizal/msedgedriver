@@ -1,1 +1,5 @@
-global-include *.txt *.py
+include README.md
+include README.txt
+include CHANGELOG.txt
+include LICENSE
+global-include *.py

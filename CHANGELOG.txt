@@ -1,7 +1,25 @@
 Change Log
 ===========
 
-0.0.1 (18/02/2023)
+0.1.0 (04/06/2026)
 -------------------
 
-- First Release
+- BREAKING: install() now returns the absolute path to the driver binary (str).
+- FIXED: infinite loop bug — registry enumeration used `i += i` instead of `i += 1`.
+- FIXED: file handles were never closed; now use `with` blocks throughout.
+- FIXED: version cache file moved from C:\ProgramData\ (requires admin) to ~/.msedgedriver/ (no admin needed).
+- FIXED: removed hardcoded 32-bit zip name — Microsoft no longer ships 32-bit Edge drivers.
+- NEW: cross-platform support — Windows (win64), macOS Intel (mac64), macOS Apple Silicon (mac64_m1), Linux (linux64).
+- NEW: get_edge_version() — public function to detect installed Edge version.
+- NEW: get_driver_path() — returns cached driver path without re-downloading.
+- NEW: cleanup() — removes all cached driver versions except the current one.
+- NEW: MsEdgeDriverException — dedicated exception instead of swallowing errors with print().
+- NEW: version pinning — install(version="125.0.2535.51") to pin a specific driver.
+- NEW: custom install path — install(install_path="/my/dir") to override the cache location.
+- NEW: quiet mode — install(quiet=True) suppresses all output.
+- NEW: uses Python logging module instead of print() — callers can configure log level.
+
+0.0.3 (27/04/2026)
+-------------------
+
+- Fixes the change in MS Edge driver endpoint crashing the system.
